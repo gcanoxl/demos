@@ -3,5 +3,5 @@ The repository stores projects that are not written for actual use, including th
 
 ## Project List
 |Project Name|Language|Description|
-|-|
+|-|-|-|
 |GeeChat|Python|A mini chat program including both client and server program|
