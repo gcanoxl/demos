@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterchat/constants.dart';
-import 'package:flutterchat/screens/chats/components/body.dart';
+import 'package:flutterchat/screens/chats/components/chats_body.dart';
 
 class ChatsScreen extends StatefulWidget {
   const ChatsScreen({super.key});
@@ -15,7 +15,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(),
-      body: const Body(),
+      body: const ChatsBody(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: kPrimaryColor,

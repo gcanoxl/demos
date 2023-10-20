@@ -3,9 +3,10 @@ import 'package:flutterchat/components/filled_outline_button.dart';
 import 'package:flutterchat/constants.dart';
 import 'package:flutterchat/models/Chat.dart';
 import 'package:flutterchat/screens/chats/components/chat_card.dart';
+import 'package:flutterchat/screens/messages/messages_screen.dart';
 
-class Body extends StatelessWidget {
-  const Body({super.key});
+class ChatsBody extends StatelessWidget {
+  const ChatsBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,11 @@ class Body extends StatelessWidget {
           itemCount: chatsData.length,
           itemBuilder: (context, index) => ChatCard(
             chat: chatsData[index],
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(MaterialPageRoute(
+                builder: (context) => const MessagesScreen(),
+              ));
+            },
           ),
         ))
       ],
