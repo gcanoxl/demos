@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterchat/constants.dart';
+import 'package:flutterchat/screens/signInOrSignUp/signin_or_signup_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -36,7 +37,11 @@ class WelcomeScreen extends StatelessWidget {
             const Spacer(flex: 3),
             FittedBox(
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => const SigninOrSignupScreen(),
+                  ));
+                },
                 child: Row(children: [
                   Text(
                     "Skip",
