@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterchat/constants.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -9,7 +10,9 @@ class WelcomeScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
+            const Spacer(flex: 2),
             Image.asset('assets/images/welcome_image.png'),
+            const Spacer(flex: 3),
             Text(
               "Welcome to our freedom \nmessaging app",
               style: Theme.of(context)
@@ -18,6 +21,7 @@ class WelcomeScreen extends StatelessWidget {
                   ?.copyWith(fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
+            const Spacer(flex: 1),
             Text(
               "Freedom talk any person of your \nmother language.",
               style: TextStyle(
@@ -29,20 +33,33 @@ class WelcomeScreen extends StatelessWidget {
               ),
               textAlign: TextAlign.center,
             ),
-            TextButton(
-              onPressed: () {},
-              child: Row(children: [
-                Text(
-                  "Skip",
-                  style: TextStyle(
+            const Spacer(flex: 3),
+            FittedBox(
+              child: TextButton(
+                onPressed: () {},
+                child: Row(children: [
+                  Text(
+                    "Skip",
+                    style: TextStyle(
+                      color: Theme.of(context)
+                          .textTheme
+                          .bodyLarge
+                          ?.color
+                          ?.withOpacity(0.8),
+                    ),
+                  ),
+                  const SizedBox(width: kDefaultPadding / 4),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    size: 16,
                     color: Theme.of(context)
                         .textTheme
                         .bodyLarge
                         ?.color
                         ?.withOpacity(0.8),
                   ),
-                ),
-              ]),
+                ]),
+              ),
             ),
           ],
         ),
